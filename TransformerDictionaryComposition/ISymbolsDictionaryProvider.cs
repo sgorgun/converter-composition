@@ -1,9 +1,14 @@
-﻿using System.Collections.Generic;
-
-namespace TransformerDictionaryComposition
+﻿namespace TransformerDictionaryComposition
 {
+    /// <summary>
+    /// Presents the provider of the dictionary of symbols.
+    /// </summary>
     public interface ISymbolsDictionaryProvider
     {
-        IReadOnlyDictionary<Symbol, string> CreateSymbolsDictionary();
+        /// <summary>
+        /// Provides the dictionary of base symbols.
+        /// </summary>
+        /// <returns>The dictionary of base symbols.</returns>
+        SymbolsDictionary CreateSymbolsDictionary();
     }
 }

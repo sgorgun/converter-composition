@@ -1,5 +1,8 @@
 ﻿namespace TransformerDictionaryComposition
 {
+    /// <summary>
+    /// Base symbols.
+    /// </summary>
     public enum Symbol : byte
     {
         Zero,
@@ -20,6 +23,6 @@
         NaN,
         PositiveInfinity,
         NegativeInfinity,
-        Epsilon
+        Epsilon,
     }
 }

@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Comma" xml:space="preserve">
+    <value>komma</value>
+  </data>
   <data name="Eight" xml:space="preserve">
     <value>acht</value>
+  </data>
+  <data name="Epsilon" xml:space="preserve">
+    <value>epsilon</value>
   </data>
   <data name="Exponent" xml:space="preserve">
     <value>exponent</value>
@@ -132,6 +138,12 @@
   <data name="Minus" xml:space="preserve">
     <value>minus</value>
   </data>
+  <data name="NaN" xml:space="preserve">
+    <value>keine zahl</value>
+  </data>
+  <data name="NegativeInfinity" xml:space="preserve">
+    <value>negative unendlichkeit</value>
+  </data>
   <data name="Nine" xml:space="preserve">
     <value>neun</value>
   </data>
@@ -140,6 +152,12 @@
   </data>
   <data name="Plus" xml:space="preserve">
     <value>plus</value>
+  </data>
+  <data name="Point" xml:space="preserve">
+    <value>punkt</value>
+  </data>
+  <data name="PositiveInfinity" xml:space="preserve">
+    <value>positive unendlichkeit</value>
   </data>
   <data name="Seven" xml:space="preserve">
     <value>sieben</value>

@@ -10,15 +10,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishDictionaryProvider", "EnglishDictionaryProvider\EnglishDictionaryProvider.csproj", "{95439371-F37D-4924-93EB-BDA107839F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnglishDictionaryProvider", "EnglishDictionaryProvider\EnglishDictionaryProvider.csproj", "{95439371-F37D-4924-93EB-BDA107839F60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RussianDictionaryProvider", "RussianDictionaryProvider\RussianDictionaryProvider.csproj", "{5953E7F8-59CD-4FDD-807C-0E8BC0F887C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RussianDictionaryProvider", "RussianDictionaryProvider\RussianDictionaryProvider.csproj", "{5953E7F8-59CD-4FDD-807C-0E8BC0F887C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourcesDictionaryProvider", "ResourcesDictionaryProvider\ResourcesDictionaryProvider.csproj", "{2595D1BE-0040-40D6-9A0A-BB9021824864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourcesDictionaryProvider", "ResourcesDictionaryProvider\ResourcesDictionaryProvider.csproj", "{2595D1BE-0040-40D6-9A0A-BB9021824864}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformerDictionaryAggregation", "TransformerDictionaryAggregarion\TransformerDictionaryAggregation.csproj", "{FEAED498-D350-4289-9619-0ECC42287975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformerDictionaryAggregation", "TransformerDictionaryAggregarion\TransformerDictionaryAggregation.csproj", "{FEAED498-D350-4289-9619-0ECC42287975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformerDictionaryComposition", "TransformerDictionaryComposition\TransformerDictionaryComposition.csproj", "{7ED4A22E-7452-4765-BD97-DF2DC38E54C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformerDictionaryComposition", "TransformerDictionaryComposition\TransformerDictionaryComposition.csproj", "{7ED4A22E-7452-4765-BD97-DF2DC38E54C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GermanDictionaryProvider", "GermanDictionaryProvider\GermanDictionaryProvider.csproj", "{C2ACCB75-A517-4F3F-BE13-EA856423A95B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{7ED4A22E-7452-4765-BD97-DF2DC38E54C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ED4A22E-7452-4765-BD97-DF2DC38E54C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ED4A22E-7452-4765-BD97-DF2DC38E54C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2ACCB75-A517-4F3F-BE13-EA856423A95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2ACCB75-A517-4F3F-BE13-EA856423A95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2ACCB75-A517-4F3F-BE13-EA856423A95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2ACCB75-A517-4F3F-BE13-EA856423A95B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

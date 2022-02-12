@@ -142,7 +142,7 @@ namespace ResourcesDictionaryProvider.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to nine .
+        ///   Looks up a localized string similar to nine.
         /// </summary>
         internal static string Nine {
             get {
