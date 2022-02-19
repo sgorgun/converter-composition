@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using EnglishDictionaryProvider;
 using Moq;
 using NUnit.Framework;
@@ -30,7 +30,7 @@ namespace Transformer.Tests
 
             transformer.Transform(123.78);
 
-            this.mock.Verify(provider => provider.CreateSymbolsDictionary(), Times.Exactly(2));
+            this.mock.Verify(provider => provider.CreateSymbolsDictionary(), Times.Once);
         }
 
         [TestCase(123.78, "en-us", ExpectedResult = "one two three point seven eight")]
