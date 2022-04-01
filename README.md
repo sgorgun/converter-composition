@@ -3,9 +3,9 @@
 ## Task Description
 
 - 1.
-    - Реализовать класс [Transformer](/TransformerDictionaryAggregarion/Transformer.cs#L6[](url)), экземплярный метод `Transform` которого выполняет преобразование вещественного чисела в его "словесный формат", при этом язык получения "словесного формата" в форме словаря является параметром настройки класса и передается извне.
-    - Добавить [новые unit тесты](/Transformer.Tests/TransformerAggregationTests.cs).
+    - Implement [Transformer](/TransformerDictionaryAggregarion/Transformer.cs#L6[](url)) class, whose `Transform` instance method converts real number to it's "word format" in some language. Language and the set of words are presented by a settings class wich is passed in `Transformer` class from outside.
+    - Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
 - 2.
-    - Реализовать класс [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5), экземплярный метод `Transform` которого выполняет преобразование вещественного чисела в его "словесный формат", при этом язык получения "словесного формата" в форме словаря является параметром настройки метода, однако время его создания определяет сам класс `Transformer`.
-    - Добавить [новые unit и mock тесты](/Transformer.Tests/TransformerCompositionTests.cs).
-    - При [тестировании](/Transformer.Tests/TransformerCompositionTests.cs) работы класса [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5) с различными языками (русский, английский, немецкий) использовать возможности [файлы ресурсов](/ResourcesDictionaryProvider/Resources) (resx-файлы).
+    - Implement [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5) class, whose `Transform` instance method converts real number to it's "word format" in some language. Language and the set of words are presented by a settings class. However, the `Transformer` class controls the creation time of an object of this class
+    - Add [new unit и mock tests](/Transformer.Tests/TransformerCompositionTests.cs).
+    - Use ability [Resources files](/ResourcesDictionaryProvider/Resources) (see [.resx files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)) when [testing](/Transformer.Tests/TransformerCompositionTests.cs) work [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5) class with various languages (russian, english, german). 
