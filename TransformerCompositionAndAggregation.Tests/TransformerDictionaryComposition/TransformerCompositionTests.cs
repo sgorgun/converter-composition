@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using EnglishDictionaryProvider;
 using Moq;
 using NUnit.Framework;
