@@ -4,8 +4,9 @@ using Moq;
 using NUnit.Framework;
 using ResourcesDictionaryProvider;
 using TransformerDictionaryComposition;
+using Transformer = TransformerDictionaryComposition.Transformer;
 
-namespace Transformer.Tests
+namespace TransformerCompositionAndAggregation.Tests.TransformerDictionaryComposition
 {
     [TestFixture]
     public class TransformerCompositionTests
@@ -26,11 +27,11 @@ namespace Transformer.Tests
 
             ISymbolsDictionaryProvider symbolsDictionaryProvider = this.mock.Object;
 
-            var transformer = new TransformerDictionaryComposition.Transformer(symbolsDictionaryProvider);
+            var transformer = new Transformer(symbolsDictionaryProvider);
 
             transformer.Transform(123.78);
 
-            this.mock.Verify(provider => provider.CreateSymbolsDictionary(), Times.Exactly(2));
+            this.mock.Verify(provider => provider.CreateSymbolsDictionary(), Times.Once);
         }
 
         [TestCase(123.78, "en-us", ExpectedResult = "one two three point seven eight")]
@@ -76,7 +77,7 @@ namespace Transformer.Tests
 
             ISymbolsDictionaryProvider symbolsDictionaryProvider = this.mock.Object;
 
-            TransformerDictionaryComposition.Transformer transformer = new TransformerDictionaryComposition.Transformer(symbolsDictionaryProvider);
+            Transformer transformer = new (symbolsDictionaryProvider);
 
             return transformer.Transform(number);
         }
@@ -84,7 +85,7 @@ namespace Transformer.Tests
         [Test]
         public void TransformToWords_DictionaryIsNull_ThrowArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => new TransformerDictionaryComposition.Transformer(null), "Provider cannot be null.");
+            Assert.Throws<ArgumentNullException>(() => new Transformer(null), "Provider cannot be null.");
         }
     }
 }

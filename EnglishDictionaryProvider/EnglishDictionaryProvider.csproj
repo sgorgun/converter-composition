@@ -20,7 +20,6 @@
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\TransformerDictionaryAggregarion\TransformerDictionaryAggregation.csproj" />
       <ProjectReference Include="..\TransformerDictionaryComposition\TransformerDictionaryComposition.csproj" />
     </ItemGroup>
 </Project>
