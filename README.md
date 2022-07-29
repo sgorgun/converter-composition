@@ -8,7 +8,9 @@ Develop a type system that allows you to convert real numbers to their string re
 
 #### Types
 - [Symbol](TransformerDictionaryComposition/Sympol) enum - an enumeration containing a set of words for all characters that a real number can contain.
+- [SymbolsDictionary](TransformerDictionaryComposition/SymbolsDictionary) class - present the dictionary of correspondences of the number characters to their word analogs in given language. 
 - [ISymbolsDictionaryProvider](TransformerDictionaryComposition/ISymbolsDictionaryProvider) interface - presents the provider of the dictionary of dictionary of correspondences of symbols to their word analogs in given language.
+- [Transformer](TransformerDictionaryComposition/Transformer) class - provides transforming double number to its string representation with specified dictionary.
 
 - Implement [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5) class, whose `Transform` instance method converts real number to it's "word format" in some language. The language and the set of words are presented by a settings class. However, the `Transformer` class controls the creation time of an object of this class.
 - Add [new unit и mock tests](/Transformer.Tests/TransformerCompositionTests.cs).
