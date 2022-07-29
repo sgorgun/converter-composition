@@ -2,14 +2,13 @@
 
 ## Task Description
 
-Develop a types system that allows you to convert a real array to an array of strings. For each array element, the string representation is a "word format" in some given language.
+Develop a type system that allows you to convert real numbers to their string representations in any given language.
 
 ### Composition Dictionary Scenario
 
 #### Types
-- [Symbol](TransformerDictionaryComposition/Sympol) enum- an enum that contains values for all possible characters in the real number representation.
-- [ISymbolsDictionaryProvider](TransformerDictionaryComposition/ISymbolsDictionaryProvider) interface 
-
+- [Symbol](TransformerDictionaryComposition/Sympol) enum - an enumeration containing a set of words for all characters that a real number can contain.
+- [ISymbolsDictionaryProvider](TransformerDictionaryComposition/ISymbolsDictionaryProvider) interface - presents the provider of the dictionary of dictionary of correspondences of symbols to their word analogs in given language.
 
 - Implement [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5) class, whose `Transform` instance method converts real number to it's "word format" in some language. The language and the set of words are presented by a settings class. However, the `Transformer` class controls the creation time of an object of this class.
 - Add [new unit и mock tests](/Transformer.Tests/TransformerCompositionTests.cs).
