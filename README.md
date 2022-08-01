@@ -16,7 +16,7 @@ Solve the converting problem of the real number to its "in words" string represe
     - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
     - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)
 
-- _ Discuss defference between composition and aggregation with your trainer, if you work in a regular group._
+- _Discuss defference between composition and aggregation with your trainer, if you work in a regular group._
 
 - Implement the following two scenarios to solve the task above.
 
