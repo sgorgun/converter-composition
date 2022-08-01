@@ -16,6 +16,7 @@ Develop a type system that allows you to convert real number to its string repre
     - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
     - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
 - Implement the following two scenarios to solve the  task above.
+- Discuss defference between composition and aggregation with your trainer, if you work in a regular group.
 
 ### Composition Dictionary Scenario
 
