@@ -22,7 +22,7 @@ Solve the converting problem of the real number to its "in words" string represe
 <details>
 <summary>
 
-- Aggregation Dictionary Scenario
+Aggregation Dictionary Scenario
 
 </summary>
 
@@ -41,7 +41,7 @@ Solve the converting problem of the real number to its "in words" string represe
 <details>
 <summary>
 
-- Composition Dictionary Scenario
+Composition Dictionary Scenario
 
 </summary> 
 
