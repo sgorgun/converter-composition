@@ -1,4 +1,4 @@
-# Transformer. Composition vs Aggregation. (in progress)
+# Converter. Composition vs Aggregation. (in progress)
 
 Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files, mock tests.
 
@@ -26,8 +26,8 @@ Aggregation Dictionary Scenario
 
 </summary>
 
-- Implement [Transformer](TransformerDictionaryAggregarion/Transformer) class whose `Transform` instance method converts real number to its "in words" string representations in any given language.     
-    **Requirement**: The `Transform` method of the `Transformer` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
+- Implement [Converter](ConverterDictionaryAggregarion/Converter) class whose `Convert` instance method converts real number to its "in words" string representations in any given language.     
+    **Requirement**: The `Convert` method of the `Converter` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
 
 - Implement [EnglishCharsDictionaryFactory](GermanDictionaryFactory/EnglishCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in german.
 
@@ -35,7 +35,7 @@ Aggregation Dictionary Scenario
 
 - Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in russian.
 
-- Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
+- Add [new unit tests](/Converter.Tests/ConverterAggregationTests.cs).
 </details>
 
 <details>
@@ -45,12 +45,12 @@ Composition Dictionary Scenario
 
 </summary> 
 
-- Implement [Transformer](TransformerDictionaryComposition/Transformer.cs) class whose `Transform` method converts real number to its "in words" string representations in any given language.     
-    **Requirement**: The `Transformer` class should be manage the lifetime of the `Charts Dictionary` class object, but do it with an additional abstraction, the factory class.   
+- Implement [Converter](ConverterDictionaryComposition/Converter.cs) class whose `Convert` method converts real number to its "in words" string representations in any given language.     
+    **Requirement**: The `Converter` class should be manage the lifetime of the `Charts Dictionary` class object, but do it with an additional abstraction, the factory class.   
     Use for the solution following type system:
-    - [Сharacter](TransformerDictionaryComposition/Сharacter) enum - an enumeration consists of a set of words for all characters that a real number can contains.
-    - [CharsDictionary](TransformerDictionaryComposition/CharsDictionary) class - presents the dictionary of correspondences of the number characters to their word analogs in given language. 
-    - [ICharsDictionaryFactory](TransformerDictionaryComposition/ICharsDictionaryFactory) interface - presents the factory of dictionary of correspondences of characters to their word analogs in given language.
+    - [Сharacter](ConverterDictionaryComposition/Сharacter) enum - an enumeration consists of a set of words for all characters that a real number can contains.
+    - [CharsDictionary](ConverterDictionaryComposition/CharsDictionary) class - presents the dictionary of correspondences of the number characters to their word analogs in given language. 
+    - [ICharsDictionaryFactory](ConverterDictionaryComposition/ICharsDictionaryFactory) interface - presents the factory of dictionary of the chars correspondences to their word analogs in given language.
 
 - Implement [ResourceCharsDictionaryFactory](ResourcesDictionaryFactory/ResourceCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in several languages (english, german, russian). 
     - To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
@@ -58,7 +58,7 @@ Composition Dictionary Scenario
     - Add resources files to [Resources](ResourcesDictionaryFactory/Resources) folder if it necessary.
     - Fill the contents of the resource files according to the specific language.
 
-- Run [unit и mock tests](TransformerCompositionAndAggregation.Tests/TransformerDictionaryComposition)
+- Run [unit и mock tests](ConverterCompositionAndAggregation.Tests/ConverterDictionaryComposition)
 
 </details>
 
