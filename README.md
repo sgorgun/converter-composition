@@ -26,16 +26,16 @@ Aggregation Dictionary Scenario
 
 </summary>
 
-- Implement [Converter](ConverterDictionaryAggregarion/Converter) class whose `Convert` instance method converts real number to its "in words" string representations in any given language.     
+- Implement [Converter](ConverterDictionaryAggregation/Converter) class whose `Convert` method converts real number to its "in words" string representations in any given language.     
     **Requirement**: The `Convert` method of the `Converter` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
 
-- Implement [EnglishCharsDictionaryFactory](GermanDictionaryFactory/EnglishCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in german.
+- Implement [EnglishCharsDictionaryFactory](GermanDictionaryFactory/EnglishCharsDictionaryFactory) class that presents the dictionary of chars correspondences of the number to their word analogs in german.
 
-- Implement [GermanCharsDictionaryFactory](EnglishDictionaryFactory/GermanCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in english.
+- Implement [GermanCharsDictionaryFactory](EnglishDictionaryFactory/GermanCharsDictionaryFactory) class that presents the dictionary of chars correspondences of the number to their word analogs in english.
 
-- Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in russian.
+- Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory) class that presents the dictionary of chars correspondences of the number to their word analogs in russian.
 
-- Add [new unit tests](/Converter.Tests/ConverterAggregationTests.cs).
+- Run [unit tests](ConverterCompositionAndAggregation.Tests/ConverterDictionaryComposition/ConverterAggregationTests.cs).
 </details>
 
 <details>
