@@ -1,8 +1,20 @@
 # Transformer. Composition vs Aggregation. (in progress)
 
-## Task Description
+Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files.
+
+Estimated time to complete the task - 4h.
+
+The task requires .NET 6 SDK installed.
+
+## Task description
 
 Develop a type system that allows you to convert real number to its string representations in any given language.
+
+- Review the articles
+    - [Difference between Composition and Aggregation](https://www.c-sharpcorner.com/article/difference-between-composition-and-aggregation/)
+    - [Aggregation Vs Composition: A Simple Practical Approach](https://www.c-sharpcorner.com/UploadFile/97fc7a/aggregation-vs-composition-a-simple-practical-approach/)
+    - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
+- Implement the following two scenarios to solve the  task above.
 
 ### Composition Dictionary Scenario
 
@@ -28,7 +40,3 @@ Develop a type system that allows you to convert real number to its string repre
 
 - Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
 
-
-- [Difference between Composition and Aggregation](https://www.c-sharpcorner.com/article/difference-between-composition-and-aggregation/)
-- [Aggregation Vs Composition: A Simple Practical Approach](https://www.c-sharpcorner.com/UploadFile/97fc7a/aggregation-vs-composition-a-simple-practical-approach/)
-- [Factory Method](https://refactoring.guru/design-patterns/factory-method)
