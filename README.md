@@ -63,5 +63,5 @@ Composition Dictionary Scenario
 </details>
 
 - _Discuss following questions with your trainer, if you work in a regular group._   
-    - What is defference between composition and aggregation?
-
+    - What is difference between composition and aggregation?
+    - Factory Method Pattern. When and why to use?
