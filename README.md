@@ -1,6 +1,6 @@
 # Transformer. Composition vs Aggregation. (in progress)
 
-Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files.
+Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files, mock tests.
 
 Estimated time to complete the task - 4h.
 
@@ -16,20 +16,20 @@ Solve the converting problem of the real number to its "in words" string represe
     - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
     - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)
 
-- Discuss defference between composition and aggregation with your trainer, if you work in a regular group.
+-_ Discuss defference between composition and aggregation with your trainer, if you work in a regular group._
 
 - Implement the following two scenarios to solve the task above.
 
 ### Aggregation Dictionary Scenario
 
 - Implement [Transformer](TransformerDictionaryAggregarion/Transformer) class whose `Transform` instance method converts real number to its "in words" string representations in any given language.     
-    **Requirement**: The `Transform` method of the `Transformer` class uses the object of the `Charts Dictionary` class, that is passed from outside as a mandatory dependency.
+    **Requirement**: The `Transform` method of the `Transformer` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
 
-- Implement [EnglishCharsDictionaryProvider](GermanDictionaryProvider/EnglishCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in german.
+- Implement [EnglishCharsDictionaryFactory](GermanDictionaryFactory/EnglishCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in german.
 
-- Implement [GermanCharsDictionaryProvider](EnglishDictionaryProvider/GermanCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in english.
+- Implement [GermanCharsDictionaryFactory](EnglishDictionaryFactory/GermanCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in english.
 
-- Implement [RussianCharsDictionaryProvider](RussianDictionaryProvider/RussianCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in russian.
+- Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in russian.
 
 - Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
 
@@ -38,14 +38,14 @@ Solve the converting problem of the real number to its "in words" string represe
 - Implement [Transformer](TransformerDictionaryComposition/Transformer) class whose `Transform` instance method converts real number to its "in words" string representations in any given language.     
     **Requirement**: The `Transformer` should be manage the lifetime of the object (composition) of the `Charts Dictionary` class, but do it with an additional abstraction, the factory class.
 
-    - [Сharacter](TransformerDictionaryComposition/Сharacter) enum - an enumeration containing a set of words for all characters that a real number can contain.
+    - [Сharacter](TransformerDictionaryComposition/Сharacter) enum - an enumeration consists of a set of words for all characters that a real number can contains.
     - [CharsDictionary](TransformerDictionaryComposition/CharsDictionary) class - presents the dictionary of correspondences of the number characters to their word analogs in given language. 
-    - [ICharsDictionaryProvider](TransformerDictionaryComposition/ICharsDictionaryProvider) interface - presents the provider of the dictionary of dictionary of correspondences of characters to their word analogs in given language.
+    - [ICharsDictionaryFactory](TransformerDictionaryComposition/ICharsDictionaryFactory) interface - presents the factory of the dictionary of dictionary of correspondences of characters to their word analogs in given language.
 
-- Implement [ResourceCharsDictionaryProvider](ResourcesDictionaryProvider/ResourceCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in several languages (english, german, russian). 
+- Implement [ResourceCharsDictionaryFactory](ResourcesDictionaryFactory/ResourceCharsDictionaryFactory) class that presents the dictionary of correspondences of the number characters to their word analogs in several languages (english, german, russian). 
     - To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
-    - Study generated code of the [Dictionary.Designer] file(ResourcesDictionaryProvider/Resources/Dictionary.Designer.cs).
-    - Add resources files to [Resources](ResourcesDictionaryProvider/Resources) folder if it necessary.
+    - Study generated code of the [Dictionary.Designer] file(ResourcesDictionaryFactory/Resources/Dictionary.Designer.cs).
+    - Add resources files to [Resources](ResourcesDictionaryFactory/Resources) folder if it necessary.
     - Fill the contents of the resource files according to the specific language.
 
 - Run [unit и mock tests](TransformerCompositionAndAggregation.Tests/TransformerDictionaryComposition)
