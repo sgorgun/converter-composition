@@ -22,7 +22,7 @@ Solve the converting problem of the real number to its "in words" string represe
 <details>
 <summary>
 
-Aggregation Dictionary Scenario
+- Aggregation Dictionary Scenario
 
 </summary>
 
@@ -38,7 +38,12 @@ Aggregation Dictionary Scenario
 - Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
 </details>
 
-### Composition Dictionary Scenario
+<details>
+<summary>
+
+- Composition Dictionary Scenario
+
+</summary> 
 
 - Implement [Transformer](TransformerDictionaryComposition/Transformer) class whose `Transform` instance method converts real number to its "in words" string representations in any given language.     
     **Requirement**: The `Transformer` should be manage the lifetime of the object of the `Charts Dictionary` class  (composition), but do it with an additional abstraction, the factory class.   
@@ -54,6 +59,6 @@ Aggregation Dictionary Scenario
     - Fill the contents of the resource files according to the specific language.
 
 - Run [unit и mock tests](TransformerCompositionAndAggregation.Tests/TransformerDictionaryComposition)
-
+</details>
 
 - _Discuss defference between composition and aggregation with your trainer, if you work in a regular group._
