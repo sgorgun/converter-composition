@@ -12,12 +12,18 @@ Develop a type system that allows you to convert real number to its string repre
     - [CharsDictionary](TransformerDictionaryComposition/CharsDictionary) class - presents the dictionary of correspondences of the number characters to their word analogs in given language. 
     - [ICharsDictionaryProvider](TransformerDictionaryComposition/ICharsDictionaryProvider) interface - presents the provider of the dictionary of dictionary of correspondences of characters to their word analogs in given language.
 
+- Implement [EnglishCharsDictionaryProvider](GermanDictionaryProvider/EnglishCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in german.
+
+- Implement [GermanCharsDictionaryProvider](EnglishDictionaryProvider/GermanCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in english.
+
+- Implement [RussianCharsDictionaryProvider](RussianDictionaryProvider/RussianCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in russian.
+
+- Implement [ResourceCharsDictionaryProvider](ResourcesDictionaryProvider/ResourceCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in several languages (english, german, russian). To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
+
 - Run [unit и mock tests]((/Transformer.Tests/TransformerCompositionTests.cs).)
-- Use ability [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically) to test `Transformer` class with various languages (russian, english, german). 
 
 ### Aggregation Dictionary Scenario
 
-#### Types
-
 - Implement [Transformer](/TransformerDictionaryAggregarion/Transformer.cs#L6[](url)) class, whose `Transform` instance method converts real number to it's "word format" in some language. The language and the set of words are presented by a settings class wich is passed in `Transformer` class from outside.
+
 - Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
