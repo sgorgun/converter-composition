@@ -8,7 +8,7 @@
     <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
     <CodeAnalysisRuleSet>..\code-analysis.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
-    <NoWarn>CA1707,S1066,SA1407,SA1600,CS8618</NoWarn>
+    <NoWarn>CA1707,S1066,SA1407,SA1600,CS8618,SA1000,SA1116,SA1118</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\code-analysis.ruleset" Link="Properties\code-analisys.ruleset" />
@@ -28,11 +28,11 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EnglishDictionaryProvider\EnglishDictionaryProvider.csproj" />
-    <ProjectReference Include="..\GermanDictionaryProvider\GermanDictionaryProvider.csproj" />
-    <ProjectReference Include="..\ResourcesDictionaryProvider\ResourcesDictionaryProvider.csproj" />
-    <ProjectReference Include="..\RussianDictionaryProvider\RussianDictionaryProvider.csproj" />
-    <ProjectReference Include="..\TransformerDictionaryAggregarion\TransformerDictionaryAggregation.csproj" />
-    <ProjectReference Include="..\TransformerDictionaryComposition\TransformerDictionaryComposition.csproj" />
+    <ProjectReference Include="..\ConverterDictionaryAggregation\ConverterDictionaryAggregation.csproj" />
+    <ProjectReference Include="..\EnglishDictionaryFactory\EnglishDictionaryFactory.csproj" />
+    <ProjectReference Include="..\GermanDictionaryFactory\GermanDictionaryFactory.csproj" />
+    <ProjectReference Include="..\ResourcesDictionaryFactory\ResourcesDictionaryFactory.csproj" />
+    <ProjectReference Include="..\RussianDictionaryFactory\RussianDictionaryFactory.csproj" />
+    <ProjectReference Include="..\ConverterDictionaryComposition\ConverterDictionaryComposition.csproj" />
   </ItemGroup>
 </Project>

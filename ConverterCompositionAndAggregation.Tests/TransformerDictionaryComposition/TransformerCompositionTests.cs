@@ -1,37 +1,39 @@
-using System;
-using EnglishDictionaryProvider;
+﻿using System;
+using ConverterDictionaryComposition;
 using Moq;
 using NUnit.Framework;
-using ResourcesDictionaryProvider;
-using TransformerDictionaryComposition;
-using Transformer = TransformerDictionaryComposition.Transformer;
+using ResourcesDictionaryFactory;
 
-namespace TransformerCompositionAndAggregation.Tests.TransformerDictionaryComposition
+namespace ConverterCompositionAndAggregation.Tests.TransformerDictionaryComposition
 {
     [TestFixture]
     public class TransformerCompositionTests
     {
-        private Mock<ISymbolsDictionaryProvider> mock;
+        private Mock<ICharsDictionaryFactory> mock;
 
         [OneTimeSetUp]
         public void SetUp()
         {
-            this.mock = new Mock<ISymbolsDictionaryProvider>();
+            this.mock = new Mock<ICharsDictionaryFactory>();
         }
 
-        [Test]
-        public void CreateDictionaryWorksOnceTime_English()
+        [TestCase(123.78)]
+        [TestCase(-0.78)]
+        [TestCase(double.NaN)]
+        [TestCase(double.MaxValue)]
+        public void Transform_CreateDictionaryMethodCallOnceTimeWithAnyLanguage(double number)
         {
-            this.mock.Setup(provider => provider.CreateSymbolsDictionary())
-                .Returns(() => new EnglishSymbolsDictionaryProvider().CreateSymbolsDictionary());
+            this.mock
+                .Setup(provider => provider.CreateDictionary())
+                .Returns(It.IsAny<CharsDictionary>);
 
-            ISymbolsDictionaryProvider symbolsDictionaryProvider = this.mock.Object;
+            ICharsDictionaryFactory charsDictionaryFactory = this.mock.Object;
 
-            var transformer = new Transformer(symbolsDictionaryProvider);
+            var transformer = new Converter(charsDictionaryFactory);
 
-            transformer.Transform(123.78);
+            transformer.Convert(number);
 
-            this.mock.Verify(provider => provider.CreateSymbolsDictionary(), Times.Once);
+            this.mock.Verify(provider => provider.CreateDictionary(), Times.Once);
         }
 
         [TestCase(123.78, "en-us", ExpectedResult = "one two three point seven eight")]
@@ -70,22 +72,23 @@ namespace TransformerCompositionAndAggregation.Tests.TransformerDictionaryCompos
         [TestCase(6.67300E-11, "de-de", ExpectedResult = "sechs komma sechs sieben drei exponent minus eins eins")]
         [TestCase(3.302e+23, "de-de", ExpectedResult = "drei komma drei null zwei exponent plus zwei drei")]
         [TestCase(1234567890, "de-de", ExpectedResult = "eins zwei drei vier fünf sechs sieben acht neun null")]
-        public string TransformToWordsTestsWithResourcesFiles(double number, string cultureName)
+        public string Transform_CallWithVariousLanguages(double number, string cultureName)
         {
-            this.mock.Setup(provider => provider.CreateSymbolsDictionary())
-                .Returns(() => new ResourceSymbolsDictionaryProvider(cultureName).CreateSymbolsDictionary());
+            this.mock
+                .Setup(provider => provider.CreateDictionary())
+                .Returns(() => new ResourceCharsDictionaryFactory(cultureName).CreateDictionary());
 
-            ISymbolsDictionaryProvider symbolsDictionaryProvider = this.mock.Object;
+            ICharsDictionaryFactory charsDictionaryFactory = this.mock.Object;
 
-            Transformer transformer = new (symbolsDictionaryProvider);
+            Converter converter = new (charsDictionaryFactory);
 
-            return transformer.Transform(number);
+            return converter.Convert(number);
         }
 
         [Test]
-        public void TransformToWords_DictionaryIsNull_ThrowArgumentNullException()
+        public void Transform_FactoryIsNull_ThrowArgumentNullException()
         {
-            Assert.Throws<ArgumentNullException>(() => new Transformer(null), "Provider cannot be null.");
+            Assert.Throws<ArgumentNullException>(() => new Converter(null), "Factory cannot be null.");
         }
     }
 }
