@@ -35,7 +35,7 @@ Aggregation Dictionary Scenario
 
 - Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in russian.
 
-- Run [unit tests](ConverterCompositionAndAggregation.Tests.TransformerDictionaryComposition/ConverterAggregationTests.cs).
+- Run [unit tests](ConverterCompositionAndAggregation.Tests/TransformerDictionaryAggregation/ConverterAggregationTests.cs).
 </details>
 
 <details>
