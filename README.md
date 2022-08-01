@@ -62,6 +62,13 @@ Composition Dictionary Scenario
 
 </details>
 
-- _Discuss following questions with your trainer, if you work in a regular group._   
+- Answer the following questions and discuss it with your trainer, if you work in a regular group.  
+    - What is an interface?
+    - Why use interfaces?
+    - What is association?
+    - What is composition? 
+    - What is aggregation? Why we need aggregation?
+    - How to keep control of the whole over the lifetime of the part while reducing their cohesion?
     - What is difference between composition and aggregation?
     - Factory Method Pattern. When and why to use?
+    - Why resource files are used?
