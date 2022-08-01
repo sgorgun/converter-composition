@@ -31,3 +31,4 @@ Develop a type system that allows you to convert real number to its string repre
 
 - [Difference between Composition and Aggregation](https://www.c-sharpcorner.com/article/difference-between-composition-and-aggregation/)
 - [Aggregation Vs Composition: A Simple Practical Approach](https://www.c-sharpcorner.com/UploadFile/97fc7a/aggregation-vs-composition-a-simple-practical-approach/)
+- [Factory Method](https://refactoring.guru/design-patterns/factory-method)
