@@ -36,8 +36,8 @@ Solve the converting problem of the real number to its "in words" string represe
 ### Composition Dictionary Scenario
 
 - Implement [Transformer](TransformerDictionaryComposition/Transformer) class whose `Transform` instance method converts real number to its "in words" string representations in any given language.     
-    **Requirement**: The `Transformer` should be manage the lifetime of the object (composition) of the `Charts Dictionary` class, but do it with an additional abstraction, the factory class.
-
+    **Requirement**: The `Transformer` should be manage the lifetime of the object (composition) of the `Charts Dictionary` class, but do it with an additional abstraction, the factory class.   
+    Use for the solution following tyype sytem:
     - [Сharacter](TransformerDictionaryComposition/Сharacter) enum - an enumeration consists of a set of words for all characters that a real number can contains.
     - [CharsDictionary](TransformerDictionaryComposition/CharsDictionary) class - presents the dictionary of correspondences of the number characters to their word analogs in given language. 
     - [ICharsDictionaryFactory](TransformerDictionaryComposition/ICharsDictionaryFactory) interface - presents the factory of the dictionary of dictionary of correspondences of characters to their word analogs in given language.
