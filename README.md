@@ -1,11 +1,67 @@
-# Transformer. Interfaces
+# Converter. Composition vs Aggregation. (in progress)
 
-## Task Description
+Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files, mock tests.
 
-- 1.
-    - Implement [Transformer](/TransformerDictionaryAggregarion/Transformer.cs#L6[](url)) class, whose `Transform` instance method converts real number to it's "word format" in some language. The language and the set of words are presented by a settings class wich is passed in `Transformer` class from outside.
-    - Add [new unit tests](/Transformer.Tests/TransformerAggregationTests.cs).
-- 2.
-    - Implement [Transformer](/TransformerDictionaryComposition/Transformer.cs#L5) class, whose `Transform` instance method converts real number to it's "word format" in some language. The language and the set of words are presented by a settings class. However, the `Transformer` class controls the creation time of an object of this class.
-    - Add [new unit и mock tests](/Transformer.Tests/TransformerCompositionTests.cs).
-    - Use ability [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically) to test `Transformer` class with various languages (russian, english, german). 
+Estimated time to complete the task - 4h.
+
+The task requires .NET 6 SDK installed.
+
+## Task description
+
+Solve the converting problem of the real number to its "in words" string representations in any given language. 
+
+- Review the articles
+    - [Difference between Composition and Aggregation](https://www.c-sharpcorner.com/article/difference-between-composition-and-aggregation/)
+    - [Aggregation Vs Composition: A Simple Practical Approach](https://www.c-sharpcorner.com/UploadFile/97fc7a/aggregation-vs-composition-a-simple-practical-approach/)
+    - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
+    - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)
+
+- Implement the following two scenarios to solve the task above.
+
+
+<details>
+<summary>
+
+Aggregation Dictionary Scenario
+
+</summary>
+
+- Implement [Converter](ConverterDictionaryAggregation/Converter) class whose `Convert` method converts real number to its "in words" string representations in any given language.     
+    **Requirement**: The `Convert` method of the `Converter` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
+
+- Implement [EnglishCharsDictionaryFactory](GermanDictionaryFactory/EnglishCharsDictionaryFactory) class that presents the dictionary of chars correspondences of the number to their word analogs in german.
+
+- Implement [GermanCharsDictionaryFactory](EnglishDictionaryFactory/GermanCharsDictionaryFactory) class that presents the dictionary of chars correspondences of the number to their word analogs in english.
+
+- Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory) class that presents the dictionary of chars correspondences of the number to their word analogs in russian.
+
+- Run [unit tests](ConverterCompositionAndAggregation.Tests/ConverterDictionaryComposition/ConverterAggregationTests.cs).
+</details>
+
+<details>
+<summary>
+
+Composition Dictionary Scenario
+
+</summary> 
+
+1. Implement [Converter](ConverterDictionaryComposition/Converter.cs) class whose `Convert` method converts real number to its "in words" string representation in any given language.     
+    **Requirement**: The `Converter` class should be manage the lifetime of the `Charts Dictionary` class object, but do it with an additional abstraction, the factory class.   
+    Use for the solution following type system:
+    - [Сharacter](ConverterDictionaryComposition/Сharacter.cs) enum consists of a set of words for all characters that a real number can contains.
+    - [CharsDictionary](ConverterDictionaryComposition/CharsDictionary.cs) class presents the dictionary of correspondences of the number characters to their word analogs in given language. 
+    - [ICharsDictionaryFactory](ConverterDictionaryComposition/ICharsDictionaryFactory.cs) interface presents the factory of dictionary of the chars correspondences to their word analogs in given language.
+
+1. Implement [ResourceCharsDictionaryFactory](ResourcesDictionaryFactory/ResourceCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in several languages (english, german, russian). 
+    - To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
+    - Study generated code of the [Dictionary.Designer](ResourcesDictionaryFactory/Resources/Dictionary.Designer.cs) file.
+    - Add resources files to [Resources](ResourcesDictionaryFactory/Resources) folder if it necessary.
+    - Fill the contents of the resource files according to the specific language.
+
+1. Run [unit и mock tests](ConverterCompositionAndAggregation.Tests/ConverterDictionaryComposition)
+
+</details>
+
+- _Discuss this question and your answer with your trainer, if you work in a regular group._   
+    - What is defference between composition and aggregation?
+
