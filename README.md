@@ -1,4 +1,4 @@
-# Converter. Composition vs Aggregation. (in progress)
+# Converter. Composition vs Aggregation
 
 Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files, mock tests.
 
