@@ -14,7 +14,7 @@ Develop a type system that allows you to convert real number to its string repre
     - [Difference between Composition and Aggregation](https://www.c-sharpcorner.com/article/difference-between-composition-and-aggregation/)
     - [Aggregation Vs Composition: A Simple Practical Approach](https://www.c-sharpcorner.com/UploadFile/97fc7a/aggregation-vs-composition-a-simple-practical-approach/)
     - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
-    - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
+    - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)
 - Implement the following two scenarios to solve the  task above.
 - Discuss defference between composition and aggregation with your trainer, if you work in a regular group.
 
