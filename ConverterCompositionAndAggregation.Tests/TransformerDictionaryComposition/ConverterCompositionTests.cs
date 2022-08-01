@@ -7,7 +7,7 @@ using ResourcesDictionaryFactory;
 namespace ConverterCompositionAndAggregation.Tests.TransformerDictionaryComposition
 {
     [TestFixture]
-    public class TransformerCompositionTests
+    public class ConverterCompositionTests
     {
         private Mock<ICharsDictionaryFactory> mock;
 

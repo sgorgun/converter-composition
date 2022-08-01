@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace ConverterCompositionAndAggregation.Tests.TransformerDictionaryAggregation
 {
     [TestFixture]
-    public class TransformerAggregationTests
+    public class ConverterAggregationTests
     {
         private CharsDictionary englishDictionary;
         private CharsDictionary russianDictionary;
