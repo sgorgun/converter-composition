@@ -62,6 +62,6 @@ Composition Dictionary Scenario
 
 </details>
 
-- _Discuss this question and your answer with your trainer, if you work in a regular group._   
+- _Discuss following questions with your trainer, if you work in a regular group._   
     - What is defference between composition and aggregation?
 
