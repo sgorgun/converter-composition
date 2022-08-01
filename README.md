@@ -32,7 +32,11 @@ Develop a type system that allows you to convert real number to its string repre
 
 - Implement [RussianCharsDictionaryProvider](RussianDictionaryProvider/RussianCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in russian.
 
-- Implement [ResourceCharsDictionaryProvider](ResourcesDictionaryProvider/ResourceCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in several languages (english, german, russian). To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically). Add files to [Resources](ResourcesDictionaryProvider/Resources) folder if it necessary.
+- Implement [ResourceCharsDictionaryProvider](ResourcesDictionaryProvider/ResourceCharsDictionaryProvider) class that presents the dictionary of correspondences of the number characters to their word analogs in several languages (english, german, russian). 
+    - To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
+    - Study generated code of the [Dictionary.Designer] file(ResourcesDictionaryProvider/Resources/Dictionary.Designer.cs).
+    - Add resources files to [Resources](ResourcesDictionaryProvider/Resources) folder if it necessary.
+    - Fill the contents of the resource files according to the specific language.
 
 - Run [unit и mock tests]((/Transformer.Tests/TransformerCompositionTests.cs).)
 
