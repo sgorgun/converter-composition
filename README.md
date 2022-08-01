@@ -19,24 +19,24 @@ Solve the converting problem of the real number to its "in words" string represe
 - Implement the following two scenarios to solve the task above.
 
 
-<details>
-<summary>
+    <details>
+    <summary>
 
-Aggregation Dictionary Scenario
+    Aggregation Dictionary Scenario
 
-</summary>
+    </summary>
 
-- Implement [Converter](ConverterDictionaryAggregation/Converter.cs) class whose `Convert` method converts real number to its "in words" string representations in any given language.     
-    **Requirement**: The `Convert` method of the `Converter` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
+    - Implement [Converter](ConverterDictionaryAggregation/Converter.cs) class whose `Convert` method converts real number to its "in words" string representations in any given language.     
+        **Requirement**: The `Convert` method of the `Converter` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
 
-- Implement [EnglishCharsDictionaryFactory](EnglishDictionaryFactory/EnglishCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in german.
+        - Implement [EnglishCharsDictionaryFactory](EnglishDictionaryFactory/EnglishCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in german.
 
-- Implement [GermanCharsDictionaryFactory](GermanDictionaryFactory/GermanCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in english.
+        - Implement [GermanCharsDictionaryFactory](GermanDictionaryFactory/GermanCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in english.
 
-- Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in russian.
+        - Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in russian.
 
-- Run [unit tests](ConverterCompositionAndAggregation.Tests/TransformerDictionaryAggregation/ConverterAggregationTests.cs).
-</details>
+        - Run [unit tests](ConverterCompositionAndAggregation.Tests/TransformerDictionaryAggregation/ConverterAggregationTests.cs).
+    </details>
 
 <details>
 <summary>
