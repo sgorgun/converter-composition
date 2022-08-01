@@ -28,6 +28,9 @@ Solve the converting problem of the real number to its "in words" string represe
 
     1. Implement [Converter](ConverterDictionaryAggregation/Converter.cs) class whose `Convert` method converts real number to its "in words" string representations in any given language.     
         **Requirement**: The `Convert` method of the `Converter` class uses the object of the `CharsDictionary` class, that is passed from outside as a mandatory dependency.
+        Use for the solution following type system:
+        - [Сharacter](ConverterDictionaryAggregation/Сharacter.cs) enum consists of a set of words for all characters that a real number can contains.
+        - [CharsDictionary](ConverterDictionaryAggregation/CharsDictionary.cs) class presents the dictionary of correspondences of the number characters to their word analogs in given language. 
 
     1. Run [unit tests](ConverterCompositionAndAggregation.Tests/TransformerDictionaryAggregation/ConverterAggregationTests.cs).
     </details>
