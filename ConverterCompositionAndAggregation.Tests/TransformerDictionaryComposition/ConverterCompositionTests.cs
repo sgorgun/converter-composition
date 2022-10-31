@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using ConverterDictionaryComposition;
 using Moq;
 using NUnit.Framework;
@@ -17,23 +17,25 @@ namespace ConverterCompositionAndAggregation.Tests.TransformerDictionaryComposit
             this.mock = new Mock<ICharsDictionaryFactory>();
         }
 
-        [TestCase(123.78)]
-        [TestCase(-0.78)]
-        [TestCase(double.NaN)]
-        [TestCase(double.MaxValue)]
-        public void Transform_CreateDictionaryMethodCallOnceTimeWithAnyLanguage(double number)
+        [TestCase(123.78, "ru-ru")]
+        [TestCase(-0.78, "de-de")]
+        [TestCase(double.NaN, "en-us")]
+        [TestCase(double.MaxValue, "en-us")]
+        public void Transform_CreateDictionaryMethodCallOnceTimeWithAnyLanguage(double number, string cultureName)
         {
-            this.mock
-                .Setup(provider => provider.CreateDictionary())
-                .Returns(It.IsAny<CharsDictionary>);
+            var mock = new Mock<ICharsDictionaryFactory>();
+            
+            mock
+                .Setup(factory => factory.CreateDictionary())
+                .Returns(() => new ResourceCharsDictionaryFactory(cultureName).CreateDictionary());
 
-            ICharsDictionaryFactory charsDictionaryFactory = this.mock.Object;
+            ICharsDictionaryFactory charsDictionaryFactory = mock.Object;
 
             var transformer = new Converter(charsDictionaryFactory);
 
             transformer.Convert(number);
 
-            this.mock.Verify(provider => provider.CreateDictionary(), Times.Once);
+            mock.Verify(provider => provider.CreateDictionary(), Times.Once);
         }
 
         [TestCase(123.78, "en-us", ExpectedResult = "one two three point seven eight")]
