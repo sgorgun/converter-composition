@@ -16,37 +16,20 @@ Solve the converting problem of the real number to its "in words" string represe
     - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
     - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)
 
-- Implement the following scenario to solve the task above.
-
-    <details>
-    <summary>
-
-    Composition Dictionary Scenario
-
-    </summary> 
-
-    1. Implement [Converter](ConverterDictionaryComposition/Converter.cs) class whose `Convert` method converts real number to its "in words" string representation in any given language.     
+- Implement [Converter](ConverterDictionaryComposition/Converter.cs) class whose `Convert` method converts real number to its "in words" string representation in any given language.     
         **Requirement**: The `Converter` class should be manage the lifetime of the `Charts Dictionary` class object, but do it with an additional abstraction, the factory class.   
         Use for the solution following type system:
         - [Сharacter](ConverterDictionaryComposition/Сharacter.cs) enum consists of a set of words for all characters that a real number can contains.
         - [CharsDictionary](ConverterDictionaryComposition/CharsDictionary.cs) class presents the dictionary of correspondences of the number characters to their word analogs in given language. 
         - [ICharsDictionaryFactory](ConverterDictionaryComposition/ICharsDictionaryFactory.cs) interface presents the factory of dictionary of the chars correspondences to their word analogs in given language.
-
-    1. Implement [EnglishCharsDictionaryFactory](EnglishDictionaryFactory/EnglishCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in german.
-
-    1. Implement [GermanCharsDictionaryFactory](GermanDictionaryFactory/GermanCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in english.
-
-    1. Implement [RussianCharsDictionaryFactory](RussianDictionaryFactory/RussianCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in russian.
     
-    1. Implement [ResourceCharsDictionaryFactory](ResourcesDictionaryFactory/ResourceCharsDictionaryFactory.cs) class that presents the dictionary of chars correspondences of the number to their word analogs in several languages (english, german, russian). 
+- Implement `ResourceCharsDictionaryFactory` class that presents the dictionary of chars correspondences of the number to their word analogs in several languages (english, german, russian). 
         - To support several languages use [resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically).
         - Study generated code of the [Dictionary.Designer](ResourcesDictionaryFactory/Resources/Dictionary.Designer.cs) file.
         - Add resources files to [Resources](ResourcesDictionaryFactory/Resources) folder if it necessary.
         - Fill the contents of the resource files according to the specific language.
 
-    1. Run [unit и mock tests](ConverterComposition.Tests/TransformerDictionaryComposition/ConverterCompositionTests.cs)
-
-    </details>
+- Run [unit и mock tests](ConverterComposition.Tests/TransformerDictionaryComposition/ConverterCompositionTests.cs)
 
 - Answer the following questions and discuss it with your trainer, if you work in a regular group.  
     - What is an interface?
