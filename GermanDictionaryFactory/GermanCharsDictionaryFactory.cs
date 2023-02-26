@@ -8,7 +8,7 @@ namespace GermanDictionaryFactory
     /// </summary>
     public class GermanCharsDictionaryFactory : ICharsDictionaryFactory
     {
-        /// <inheritdoc href="ConverterDictionaryComposition.CreateDictionary"/>
+        /// <inheritdoc href="ConverterComposition.CreateDictionary"/>
         public CharsDictionary CreateDictionary() => throw new NotImplementedException();
     }
 }

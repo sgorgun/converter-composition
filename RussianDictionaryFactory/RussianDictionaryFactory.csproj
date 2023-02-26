@@ -20,6 +20,6 @@
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\ConverterDictionaryComposition\ConverterDictionaryComposition.csproj" />
+      <ProjectReference Include="..\ConverterComposition\ConverterComposition.csproj" />
     </ItemGroup>
 </Project>

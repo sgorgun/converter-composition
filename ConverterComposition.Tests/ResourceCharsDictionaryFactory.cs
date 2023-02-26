@@ -4,7 +4,7 @@ using System.Globalization;
 using ConverterDictionaryComposition;
 using ResourcesDictionaryFactory.Resources;
 
-namespace ResourcesDictionaryFactory
+namespace ConverterCompositionAndAggregation.Tests
 {
     /// <summary>
     /// Presents the factory of the dictionary of the char correspondences of the number to their word analogs in given language.
@@ -31,11 +31,11 @@ namespace ResourcesDictionaryFactory
         {
             return new CharsDictionary()
             {
-                Dictionary = new Dictionary<Сharacter, string>
+                Dictionary = new Dictionary<Character, string>
                 {
-                    [Сharacter.Zero] = Dictionary.Zero, 
-                    [Сharacter.One] = Dictionary.One, 
-                    [Сharacter.Two] = Dictionary.Two,
+                    [Character.Zero] = Dictionary.Zero,
+                    [Character.One] = Dictionary.One,
+                    [Character.Two] = Dictionary.Two,
                     //Add the required code here. Remove comments.
                 },
                 CultureName = this.cultureName,
