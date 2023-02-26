@@ -1,8 +1,8 @@
-# Converter. Composition vs Aggregation
+# Converter. Composition
 
 Intermediate level task for practicing inheritance, interfaces, composition, aggregation, Factory Method design pattern, resources files, mock tests.
 
-Estimated time to complete the task - 4h.
+Estimated time to complete the task - 2h.
 
 The task requires .NET 6 SDK installed.
 
