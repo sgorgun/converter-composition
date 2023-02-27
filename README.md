@@ -16,7 +16,7 @@ Solve the converting problem of the real number to its "in words" string represe
     - [Factory Method](https://refactoring.guru/design-patterns/factory-method)
     - [Resources files](https://docs.microsoft.com/en-us/dotnet/core/extensions/work-with-resx-files-programmatically)
 
-- Implement [Converter](ConverterDictionaryComposition/Converter.cs) class whose `Convert` method converts real number to its "in words" string representation in any given language.     
+- Implement [Converter](ConverterComposition/Converter.cs) class whose `Convert` method converts real number to its "in words" string representation in any given language.     
         **Requirement**: The `Converter` class should be manage the lifetime of the `Charts Dictionary` class object, but do it with an additional abstraction, the factory class.     
         Use for the solution following type system:     
         - [Сharacter](ConverterComposition/Character.cs) enum consists of a set of words for all characters that a real number can contains.     
