@@ -29,7 +29,7 @@ Solve the converting problem of the real number to its "in words" string represe
         - Add resources files to [Resources](ConverterComposition.Tests/Resources) folder if it necessary.   
         - Fill the contents of the resource files according to the specific language.     
 
-- Run [unit и mock tests](ConverterComposition.Tests/TransformerDictionaryComposition/ConverterCompositionTests.cs)    
+- Run [unit и mock tests](ConverterComposition.Tests/ConverterCompositionTests.cs)    
 
 - Answer the following questions and discuss it with your trainer, if you work in a regular group.  
     - What is an interface?
