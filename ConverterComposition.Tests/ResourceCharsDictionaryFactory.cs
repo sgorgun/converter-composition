@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Globalization;
 using ResourcesDictionaryFactory.Resources;
 
 namespace ConverterComposition.Tests
@@ -35,7 +33,22 @@ namespace ConverterComposition.Tests
                     [Character.Zero] = Dictionary.Zero,
                     [Character.One] = Dictionary.One,
                     [Character.Two] = Dictionary.Two,
-                    //Add the required code here. Remove comments.
+                    [Character.Three] = Dictionary.Three,
+                    [Character.Four] = Dictionary.Four,
+                    [Character.Five] = Dictionary.Five,
+                    [Character.Six] = Dictionary.Six,
+                    [Character.Seven] = Dictionary.Seven,
+                    [Character.Eight] = Dictionary.Eight,
+                    [Character.Nine] = Dictionary.Nine,
+                    [Character.Minus] = Dictionary.Minus,
+                    [Character.Plus] = Dictionary.Plus,
+                    [Character.Point] = Dictionary.Point,
+                    [Character.Comma] = Dictionary.Comma,
+                    [Character.Exponent] = Dictionary.Exponent,
+                    [Character.Epsilon] = Dictionary.Epsilon,
+                    [Character.NegativeInfinity] = Dictionary.NegativeInfinity,
+                    [Character.PositiveInfinity] = Dictionary.PositiveInfinity,
+                    [Character.NaN] = Dictionary.NaN,
                 },
                 CultureName = this.cultureName,
             };

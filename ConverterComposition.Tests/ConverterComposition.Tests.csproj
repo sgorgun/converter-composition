@@ -31,4 +31,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ConverterComposition\ConverterComposition.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\Dictionary.ru.resx" />
+  </ItemGroup>
 </Project>
