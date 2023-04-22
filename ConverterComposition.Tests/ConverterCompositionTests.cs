@@ -1,9 +1,8 @@
 using System;
-using ConverterDictionaryComposition;
 using Moq;
 using NUnit.Framework;
 
-namespace ConverterCompositionAndAggregation.Tests
+namespace ConverterComposition.Tests
 {
     [TestFixture]
     public class ConverterCompositionTests

@@ -1,4 +1,4 @@
-﻿namespace ConverterDictionaryComposition
+﻿namespace ConverterComposition
 {
     /// <summary>
     /// Interface presents the factory of the dictionary of the char correspondences of the number to their word analogs in given language.

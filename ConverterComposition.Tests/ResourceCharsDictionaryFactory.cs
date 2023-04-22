@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using ConverterDictionaryComposition;
 using ResourcesDictionaryFactory.Resources;
 
-namespace ConverterCompositionAndAggregation.Tests
+namespace ConverterComposition.Tests
 {
     /// <summary>
     /// Presents the factory of the dictionary of the char correspondences of the number to their word analogs in given language.

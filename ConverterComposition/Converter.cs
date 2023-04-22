@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConverterDictionaryComposition
+namespace ConverterComposition
 {
     /// <summary>
     /// Converts a real number to string.
