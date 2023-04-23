@@ -1,5 +1,7 @@
-﻿using System.Globalization;
-using ResourcesDictionaryFactory.Resources;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using ConverterComposition.Tests.Resources;
 
 namespace ConverterComposition.Tests
 {
@@ -8,7 +10,7 @@ namespace ConverterComposition.Tests
     /// </summary>
     public class ResourceCharsDictionaryFactory : ICharsDictionaryFactory
     {
-        private string? cultureName;
+        private readonly string cultureName;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourceCharsDictionaryFactory"/> class.
@@ -17,7 +19,7 @@ namespace ConverterComposition.Tests
         /// <exception cref="System.ArgumentException">Thrown when cultureName is null or empty.</exception>
         public ResourceCharsDictionaryFactory(string? cultureName)
         {
-            Dictionary.Culture = cultureName is null
+            ResourceDictionary.Culture = cultureName is null
                 ? throw new ArgumentException($"{nameof(cultureName)} cannot be null or empty.", nameof(cultureName))
                 : new CultureInfo(cultureName);
             this.cultureName = cultureName;
@@ -26,29 +28,29 @@ namespace ConverterComposition.Tests
         /// <inheritdoc cref="ICharsDictionaryFactory.CreateDictionary"/>
         public CharsDictionary CreateDictionary()
         {
-            return new CharsDictionary()
+            return new CharsDictionary
             {
                 Dictionary = new Dictionary<Character, string>
                 {
-                    [Character.Zero] = Dictionary.Zero,
-                    [Character.One] = Dictionary.One,
-                    [Character.Two] = Dictionary.Two,
-                    [Character.Three] = Dictionary.Three,
-                    [Character.Four] = Dictionary.Four,
-                    [Character.Five] = Dictionary.Five,
-                    [Character.Six] = Dictionary.Six,
-                    [Character.Seven] = Dictionary.Seven,
-                    [Character.Eight] = Dictionary.Eight,
-                    [Character.Nine] = Dictionary.Nine,
-                    [Character.Minus] = Dictionary.Minus,
-                    [Character.Plus] = Dictionary.Plus,
-                    [Character.Point] = Dictionary.Point,
-                    [Character.Comma] = Dictionary.Comma,
-                    [Character.Exponent] = Dictionary.Exponent,
-                    [Character.Epsilon] = Dictionary.Epsilon,
-                    [Character.NegativeInfinity] = Dictionary.NegativeInfinity,
-                    [Character.PositiveInfinity] = Dictionary.PositiveInfinity,
-                    [Character.NaN] = Dictionary.NaN,
+                    [Character.Zero] = ResourceDictionary.Zero,
+                    [Character.One] = ResourceDictionary.One,
+                    [Character.Two] = ResourceDictionary.Two,
+                    [Character.Three] = ResourceDictionary.Three,
+                    [Character.Four] = ResourceDictionary.Four,
+                    [Character.Five] = ResourceDictionary.Five,
+                    [Character.Six] = ResourceDictionary.Six,
+                    [Character.Seven] = ResourceDictionary.Seven,
+                    [Character.Eight] = ResourceDictionary.Eight,
+                    [Character.Nine] = ResourceDictionary.Nine,
+                    [Character.Minus] = ResourceDictionary.Minus,
+                    [Character.Plus] = ResourceDictionary.Plus,
+                    [Character.Point] = ResourceDictionary.Point,
+                    [Character.Comma] = ResourceDictionary.Comma,
+                    [Character.Exponent] = ResourceDictionary.Exponent,
+                    [Character.Epsilon] = ResourceDictionary.Epsilon,
+                    [Character.NegativeInfinity] = ResourceDictionary.NegativeInfinity,
+                    [Character.PositiveInfinity] = ResourceDictionary.PositiveInfinity,
+                    [Character.NaN] = ResourceDictionary.NaN,
                 },
                 CultureName = this.cultureName,
             };

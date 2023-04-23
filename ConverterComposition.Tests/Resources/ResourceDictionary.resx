@@ -118,60 +118,60 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Comma" xml:space="preserve">
-    <value>запятая</value>
+    <value>comma</value>
   </data>
   <data name="Eight" xml:space="preserve">
-    <value>восемь</value>
+    <value>eight</value>
   </data>
   <data name="Epsilon" xml:space="preserve">
-    <value>эпсилон</value>
+    <value>epsilon</value>
   </data>
   <data name="Exponent" xml:space="preserve">
-    <value>экспонента</value>
+    <value>exponent</value>
   </data>
   <data name="Five" xml:space="preserve">
-    <value>пять</value>
+    <value>five</value>
   </data>
   <data name="Four" xml:space="preserve">
-    <value>четыре</value>
+    <value>four</value>
   </data>
   <data name="Minus" xml:space="preserve">
-    <value>минус</value>
+    <value>minus</value>
   </data>
   <data name="NaN" xml:space="preserve">
-    <value>не число</value>
+    <value>not a number</value>
   </data>
   <data name="NegativeInfinity" xml:space="preserve">
-    <value>отрицательная бесконечность</value>
+    <value>negative infinity</value>
   </data>
   <data name="Nine" xml:space="preserve">
-    <value>девять</value>
+    <value>nine</value>
   </data>
   <data name="One" xml:space="preserve">
-    <value>один</value>
+    <value>one</value>
   </data>
   <data name="Plus" xml:space="preserve">
-    <value>плюс</value>
+    <value>plus</value>
   </data>
   <data name="Point" xml:space="preserve">
-    <value>точка</value>
+    <value>point</value>
   </data>
   <data name="PositiveInfinity" xml:space="preserve">
-    <value>положительная бесконечность</value>
+    <value>positive infinity</value>
   </data>
   <data name="Seven" xml:space="preserve">
-    <value>семь</value>
+    <value>seven</value>
   </data>
   <data name="Six" xml:space="preserve">
-    <value>шесть</value>
+    <value>six</value>
   </data>
   <data name="Three" xml:space="preserve">
-    <value>три</value>
+    <value>three</value>
   </data>
   <data name="Two" xml:space="preserve">
-    <value>два</value>
+    <value>two</value>
   </data>
   <data name="Zero" xml:space="preserve">
-    <value>ноль</value>
+    <value>zero</value>
   </data>
 </root>

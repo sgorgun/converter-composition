@@ -5,7 +5,7 @@ namespace ConverterComposition
     /// <summary>
     /// Presents the dictionary of the char correspondences of the number to their word analogs in given language.
     /// </summary>
-    public class CharsDictionary
+    public sealed class CharsDictionary
     {
         /// <summary>
         /// Gets or sets the dictionary of all possible characters.
